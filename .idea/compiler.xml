@@ -6,12 +6,6 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springboot" />
-        <module name="springcloud_member" />
-        <module name="springcloud_order" />
-        <module name="springcloud_server" />
-        <module name="springcloud_shop" />
-        <module name="springcloud_zuul" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
