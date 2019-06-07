@@ -6,12 +6,23 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="springcloud_config_client" />
+        <module name="springcloud_config_server" />
+        <module name="springcloud_member" />
+        <module name="springcloud_order" />
+        <module name="springcloud_order_fegin" />
+        <module name="springcloud_server" />
+        <module name="springcloud_shop" />
+        <module name="springcloud_zuul" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="springboot" target="1.5" />
+      <module name="springcloud_config_client" target="1.8" />
+      <module name="springcloud_config_server" target="1.8" />
       <module name="springcloud_member" target="1.8" />
       <module name="springcloud_order" target="1.8" />
+      <module name="springcloud_order_fegin" target="1.8" />
       <module name="springcloud_server" target="1.8" />
       <module name="springcloud_shop" target="1.8" />
       <module name="springcloud_zuul" target="1.8" />

@@ -15,6 +15,7 @@ public class OrderService {
     //将resul
     @Autowired
     private RestTemplate restTemplate;
+
     public List<String> getAllUserService(){
         //访问会员服务
         //Feign 方式

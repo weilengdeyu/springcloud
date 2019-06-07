@@ -19,6 +19,11 @@ public class MemberController {
     //控制器方法，返回的都是json数据
     @RequestMapping("/getAllUsers")
     public List<String> getAllUsers(){
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         List<String> list=new ArrayList<String>();
         list.add("2017");
         list.add("2018");

@@ -1,0 +1,32 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8888/eureka/
+server:
+  port: 8765
+feign:
+   hystrix: #开启了断路器
+     enabled: true
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 3000
+      circuitBreaker:  #滚动窗口能承载的最大请求数
+      ##########滚动窗口：时间， 默认10s   请求次数  20次
+      #####当然这个数字是可以调整的
+        requestVolumeThreshold: 2
+      metrics:
+       rollingStats:
+         timeInMilliseconds: 5000
+tomcat:
+    max-threads: 50
+spring:
+  application:
+    name: service-order-fegin
+#请求处理的超时时间
+ribbon.ReadTimeout: 120000
+#请求连接的超时时间
+ribbon.ConnectTimeout: 30000

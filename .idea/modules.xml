@@ -3,8 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/springboot.iml" filepath="$PROJECT_DIR$/springboot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud_config_client/springcloud_config_client.iml" filepath="$PROJECT_DIR$/springcloud_config_client/springcloud_config_client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud_config_server/springcloud_config_server.iml" filepath="$PROJECT_DIR$/springcloud_config_server/springcloud_config_server.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud_member/springcloud_member.iml" filepath="$PROJECT_DIR$/springcloud_member/springcloud_member.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud_order/springcloud_order.iml" filepath="$PROJECT_DIR$/springcloud_order/springcloud_order.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud_order_fegin/springcloud_order_fegin.iml" filepath="$PROJECT_DIR$/springcloud_order_fegin/springcloud_order_fegin.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud_server/springcloud_server.iml" filepath="$PROJECT_DIR$/springcloud_server/springcloud_server.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud_shop/springcloud_shop.iml" filepath="$PROJECT_DIR$/springcloud_shop/springcloud_shop.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud_zuul/springcloud_zuul.iml" filepath="$PROJECT_DIR$/springcloud_zuul/springcloud_zuul.iml" />

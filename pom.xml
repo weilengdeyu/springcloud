@@ -6,7 +6,11 @@
 
     <groupId>cn.happy</groupId>
     <artifactId>springboot</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>springcloud_order_fegin</module>
+    </modules>
 
 
 </project>
