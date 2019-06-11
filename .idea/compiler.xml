@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="springcloud_config_client" />
         <module name="springcloud_config_server" />
+        <module name="springcloud_dashboard" />
         <module name="springcloud_member" />
         <module name="springcloud_order" />
         <module name="springcloud_order_fegin" />
@@ -20,6 +21,7 @@
       <module name="springboot" target="1.5" />
       <module name="springcloud_config_client" target="1.8" />
       <module name="springcloud_config_server" target="1.8" />
+      <module name="springcloud_dashboard" target="1.8" />
       <module name="springcloud_member" target="1.8" />
       <module name="springcloud_order" target="1.8" />
       <module name="springcloud_order_fegin" target="1.8" />

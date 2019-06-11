@@ -1,0 +1,58 @@
+2019年6月11日08:42:48
+1.熔断
+   断路器，在调度方做配置
+  1.1 改造了member服务的
+        @RequestMapping("/getAllUsers")
+         try {
+              Thread.sleep(3000);
+          } catch (InterruptedException e) {
+              e.printStackTrace();
+          }
+
+  1.2  springcloud_order_fegin VS springcloud_order？？
+     解析：Fegin调用的客户端  。RestTemplate
+
+  1.3springcloud_order_fegin我配置断路器的地方
+
+  1.4创建一个fallback层，定义一个实现了MemberFeign的类
+  public class MemberFallBack implements MemberFeign {
+      @Override
+      public List<String> getToOrderMemberAll() {
+          List<String> list=new ArrayList<String>();
+          list.add("服务发生异常。。。");
+          return list;
+      }
+  }
+  1.5断路器打开，那我走的时候降级的方法
+  @FeignClient(value = "service-member",fallback = MemberFallBack.class)
+
+  1.6配置依赖
+  <dependency>
+              <groupId>org.springframework.cloud</groupId>
+              <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+          </dependency>
+  1.7启动类上打一个注解
+  @EnableHystrix
+
+  1.8调整tomcat的默认线程数
+  tomcat:
+      max-threads: 50
+  1.9用Feign和Hystrix整合
+  feign:
+     hystrix: #开启了断路器
+       enabled: true
+   1.10
+   hystrix:
+     command:
+       default:
+         execution:
+           isolation:
+             thread:
+               timeoutInMilliseconds: 3000
+         circuitBreaker:  #滚动窗口能承载的最大请求数
+         ##########滚动窗口：时间， 默认10s   请求次数  20次
+         #####当然这个数字是可以调整的
+           requestVolumeThreshold: 2
+         metrics:
+          rollingStats:
+            timeInMilliseconds: 5000  #滚动窗口的持续时间

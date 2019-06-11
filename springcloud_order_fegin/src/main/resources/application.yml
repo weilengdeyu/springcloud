@@ -20,7 +20,7 @@ hystrix:
         requestVolumeThreshold: 2
       metrics:
        rollingStats:
-         timeInMilliseconds: 5000
+         timeInMilliseconds: 5000  #滚动窗口的持续时间
 tomcat:
     max-threads: 50
 spring:
@@ -30,3 +30,8 @@ spring:
 ribbon.ReadTimeout: 120000
 #请求连接的超时时间
 ribbon.ConnectTimeout: 30000
+management:
+  endpoints:
+    web:
+      exposure:
+        exclude: '*'
